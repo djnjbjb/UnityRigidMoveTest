@@ -9,7 +9,7 @@ public class TransformPositionModifiedALittleBit: MonoBehaviour
         Vector3 next_position = transform.position + Vector3.right * 5;
 
         //modify transform.position a little bit
-        //diff = 1e-7 stops moving, diff = 1e-8 not stops moving.
+        //diff = 1e-7 stops moving, diff = 1e-8 not stops moving. Type float has 7 digits of precision, this may be the reason. 
         float diff = (float)1e-7;
         transform.position = transform.position + transform.position * diff;
 
